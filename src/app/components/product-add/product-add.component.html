@@ -1,0 +1,36 @@
+<div>
+    <h2>Employee Add</h2>
+
+    <div class="card">
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-group">
+                    <label for="employeeID">Employee name</label>
+                    <input type="number" class="form-control" [(ngModel)]="employeeData.id" id="employeeID"
+                        placeholder="Enter ID" name="id">
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeName">Employee name</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeeData.employee_name" id="employeeName"
+                        placeholder="Enter Name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeSalary">Employee Salary</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeeData.employee_salary"
+                        id="employeeSalary" placeholder="Enter Salary" name="salary">
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeAge">Employee Age</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeeData.employee_age" id="employeeAge"
+                        placeholder="Enter Age" name="age">
+                </div>
+                <button type="button" class="btn btn-primary" (click)="addProduct()">Agregar</button>
+            </form>
+
+        </div>
+    </div>

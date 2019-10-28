@@ -1,0 +1,32 @@
+<h2 class="display-2">Product List</h2>
+
+<div>
+    <button class="btn btn-success" (click)="add()">
+        Add
+    </button>
+</div>
+
+<br>
+<div class="card" style="width: 15rem; margin-bottom: 20px; padding: 3px;" *ngFor="let product of products; let i = index">
+
+    <img src="../../../assets/images/girl.png" style="width: 100px;" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+        <h5 class="card-title">
+            <span class="badge badge-pill badge-warning">
+                {{i+1}}
+            </span>
+            <a routerLink="/product-details/{{product.id}}">
+                {{product.employee_name}}
+            </a>
+
+        </h5>
+
+        <p class="card-text">
+            Salary: {{product.employee_salary}}
+            <br>
+            Age: {{product.employee_age}}
+        </p>
+        <button class="btn btn-danger" title="delete product" (click)="delete(product.id)">Delete</button>
+    </div>
+</div>
